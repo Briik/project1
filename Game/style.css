@@ -1,0 +1,21 @@
+body{
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+#GameSpace{
+  margin: 0 auto;
+  max-width: 80%;
+  background-color: grey;
+  color: black;
+  display: inline-block;
+}
+.country{
+  height: 150px;
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  border: 2px solid black;
+  display: inline-block;
+}
