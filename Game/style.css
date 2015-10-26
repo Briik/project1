@@ -19,6 +19,10 @@ body{
   border: 2px solid black;
   display: inline-block;
 }
+.parties, .details{
+  width: 0px;
+  height: 0px;
+}
 .pop{
   position: fixed;
   top: 25%;
