@@ -11,6 +11,7 @@ body{
   display: inline-block;
 }
 .country{
+  float: none;
   height: 200px;
   width: 150px;
   text-align: center;
