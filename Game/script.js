@@ -28,5 +28,9 @@ $(document).ready(function() {
     console.log("popping out!");
     $(this).closest('div').find('p').removeClass().addClass("pop");
     setTimeout(retract, 2000);
+    console.log("numCorrect: " + numCorrect);
+    if (numCorrect === $(".country").length){
+      alert("You have been playing for a while!");
+    };
   });
 });
