@@ -10,31 +10,38 @@ body{
   color: black;
   display: inline-block;
 }
-.country{
+.country {
   float: none;
-  height: 200px;
-  width: 15%;
+  height: 50px;
+  width: 100px;
   text-align: center;
   margin: 0 auto;
   background-color: white;
   border: 2px solid black;
   display: inline-block;
 }
-p{
+.stuff, p{
   height: 0px;
   width: 0px;
   color: transparent;
 }
-.pop{
+.pop, .pop2 {
   background: solid;
   background-color: white;
   position: fixed;
-  top: 25%;
-  left: 25%;
-  width: 50%;
   height: auto;
   border: 10px solid black;
   z-index: 2;
   overflow: auto;
   color: black;
+  width: 200px;
+  font-size: 36px;
+}
+.pop{
+  top: 25%;
+  left: 50%;
+}
+.pop2{
+  top: 30%;
+  left: 50%;
 }
