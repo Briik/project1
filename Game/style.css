@@ -27,14 +27,14 @@ body{
 }
 .pop, .pop2 {
   background: solid;
-  background-color: white;
+  background-color: grey;
   position: fixed;
   height: auto;
   border: 10px solid black;
   z-index: 2;
   overflow: auto;
   color: black;
-  width: 200px;
+  width: 250px;
   font-size: 36px;
 }
 .pop{
@@ -44,4 +44,13 @@ body{
 .pop2{
   top: 30%;
   left: 50%;
+}
+/*The below classes are not working...?*/
+.correct{
+  background: solid;
+  background-color: #66FF00;
+}
+.tryAgain{
+  background: solid;
+  background-color: #FF033E;
 }

@@ -3,11 +3,22 @@ $(document).ready(function() {
   $("#Announcement").html("FLASH CARDS FOR NATIONAL CAPITALS");
   var WinOrLose = $("#WinOrLose");
   var numCorrect = 0;
+  var numWrong = 0;
   var correct = "<br><br>CORRECT!<br><br>";
-  var tryAgain = "<br><br>Try Again!<br><br>";
+  var tryItAgain = "<br><br>Try Again!<br><br>";
   var gameResponse = "Error: This is the Default Text."
   var targetP = "placeholder";
   var savedCapital = "placeholder";
+  var cardName = $("#countryName").val();
+  var cardCaptial = $("#capitalName").val();
+
+var createAcard = function cardCreate(){
+$("#GameSpace").append("<div class='country' id='" + cardName + "'>" + cardName + "<p>" + cardCaptial + "</p></div>");
+};
+
+$("#submit").on("click", function(){
+  cardCreate();
+});
 
   function checkContent(event) {
     var identity = event.target;
@@ -16,10 +27,13 @@ $(document).ready(function() {
     var theCapital =  capital.textContent.toLowerCase();
     if (user.toLowerCase() == theCapital) {
       numCorrect++;
+      $("#guessCounter").html("Good Guesses: " + numCorrect);
       gameResponse = correct;
       // return true;
     } else {
-      gameResponse = tryAgain;
+      numWrong++;
+      $("#wrongCounter").html("Wrong Answers: " + numWrong);
+      gameResponse = tryItAgain;
       // return false;
     };
     WinOrLose.html("" + gameResponse + "");
@@ -30,6 +44,9 @@ $(document).ready(function() {
     targetP.removeClass("pop");
     WinOrLose.removeClass("pop2");
     WinOrLose.removeClass("pop");
+    //Commented out due to classes not being added... :(
+    // WinOrLose.removeClass("correct");
+    // WinOrLose.removeClass("tryAgain");
     // targetP.innerHTML= savedCapital;
   };
 
@@ -40,7 +57,13 @@ $(document).ready(function() {
 
     var addclass = function addingClass() {
       WinOrLose.addClass("pop2");
-      WinOrLose.addClass("pop");
+      //The below function is not working..?
+      // if (WinOrLose.innerHTML ==correct) {
+      //   WinOrLose.addClass("correct");
+      // };
+      // if (WinOrLose.innerHTML ==tryItAgain) {
+      //   WinOrLose.addClass("tryAgain");
+      // };
       thisP.removeClass().addClass("pop");
     }.bind(this);
 
