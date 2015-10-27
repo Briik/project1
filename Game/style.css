@@ -13,7 +13,7 @@ body{
 .country{
   float: none;
   height: 200px;
-  width: 150px;
+  width: 15%;
   text-align: center;
   margin: 0 auto;
   background-color: white;
@@ -32,7 +32,7 @@ p{
   top: 25%;
   left: 25%;
   width: 50%;
-  height: 50%;
+  height: auto;
   border: 10px solid black;
   z-index: 2;
   overflow: auto;
