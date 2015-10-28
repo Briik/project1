@@ -9,16 +9,20 @@ $(document).ready(function() {
   var gameResponse = "Error: This is the Default Text."
   var targetP = "placeholder";
   var savedCapital = "placeholder";
-  var cardName = $("#countryName").val();
-  var cardCaptial = $("#capitalName").val();
 
-var createAcard = function cardCreate(){
-$("#GameSpace").append("<div class='country' id='" + cardName + "'>" + cardName + "<p>" + cardCaptial + "</p></div>");
-};
 
-$("#submit").on("click", function(){
-  cardCreate();
-});
+  function cardCreate(){
+    var cardName = $(".createCountry").val();
+    var cardCaptial = $(".createCapital").val();
+    $("#GameSpace").prepend("<div class='country' id='" + cardName + "'>" + cardName + "<p>" + cardCaptial + "</p></div>");
+    alert("A wild card appeared...");
+  };
+// $("#submit").on("click" function(){})
+  $(".form").submit(function(event) {
+    event.preventDefault();
+    cardCreate();
+  });
+
 
   function checkContent(event) {
     var identity = event.target;
@@ -50,7 +54,7 @@ $("#submit").on("click", function(){
     // targetP.innerHTML= savedCapital;
   };
 
-  $(".country").on("click", function(event) {
+  $("body").on("click", ".country", function(event) {
     savedCapital = event.target.firstChild.nextSibling.innerHTML;
     var thisP = $(this).closest('div').find('p')
     // console.log("targetP set to: " + targetP + "  Should be same as thisP.");

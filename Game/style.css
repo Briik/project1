@@ -13,7 +13,7 @@ body{
 .country {
   float: none;
   height: 50px;
-  width: 100px;
+  width: 120px;
   text-align: center;
   margin: 0 auto;
   background-color: white;
@@ -38,7 +38,7 @@ body{
   font-size: 36px;
 }
 .pop{
-  top: 25%;
+  top: 20%;
   left: 50%;
 }
 .pop2{
