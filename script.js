@@ -28,7 +28,7 @@ $(document).ready(function() {
   $(".form").submit(function(event) {
     event.preventDefault();
     cardCreate();
-    setTimeout(removeWildCard, 1500);
+    setTimeout(removeWildCard, 1000);
   });
 
   function checkContent(event) {
