@@ -10,64 +10,64 @@
 
 <body>
   <header>
-    <h1>Flash Cards!</h1>
+    <h1>WDI Flash Cards Project</h1>
     <h2 id="Announcement"></h2>
   </header>
   <form class="form">
-  Country:&nbsp;
-  <input type="text" class="createCountry"  placeholder="Make your own cards!">
-  &nbsp;
-  Capital:&nbsp;
-  <input type="text" class="createCapital"  placeholder="Make your own cards!">
-  &nbsp;
-  <input type="submit" value="Create Card" id="submit">
-  </form>
+    <h3>Make your own cards here:</h3>
+    Country:&nbsp;
+    <input type="text" class="createCountry" placeholder="Make your own cards!"> &nbsp; Capital:&nbsp;
+    <input type="text" class="createCapital" placeholder="Make your own cards!"> &nbsp;
+    <input type="submit" value="Create Card" id="submit">
+  </form><br>
   <div class="stuff" id="WinOrLose"></div>
   <div id="GameSpace">
     <div class="country" id="Australia">Australia
-      <p>Canberra</div>
+      <p class="hidden">Canberra</div>
     <div class="country" id="Bahrain">Bahrain
-      <p>Manama</p>
+      <p class="hidden">Manama</p>
     </div>
     <div class="country" id="Chile">Chile
-      <p>Santiago</p>
+      <p class="hidden">Santiago</p>
     </div>
     <div class="country" id="Colombia">Colombia
-      <p>Bogota</p>
+      <p class="hidden">Bogota</p>
     </div>
     <div class="country" id="Dominican Republic">Dominican Republic
-      <p>Santo Domingo</p>
+      <p class="hidden">Santo Domingo</p>
     </div>
     <div class="country" id="Egypt">Egypt
-      <p>Cairo</p>
+      <p class="hidden">Cairo</p>
     </div>
     <div class="country" id="Jordan">Jordan
-      <p>Amman</p>
+      <p class="hidden">Amman</p>
     </div>
     <div class="country" id="Korea">Korea
-      <p>Seoul</p>
+      <p class="hidden">Seoul</p>
     </div>
     <div class="country" id="Morocco">Morocco
-      <p>Rabat</p>
+      <p class="hidden">Rabat</p>
     </div>
     <div class="country" id="Canada">Canada
-      <p>Ottawa</p>
+      <p class="hidden">Ottawa</p>
     </div>
     <div class="country" id="Oman">Oman
-      <p>Muscat</p>
+      <p class="hidden">Muscat</p>
     </div>
     <div class="country" id="Panama">Panama
-      <p>Panama City</p>
+      <p class="hidden">Panama City</p>
     </div>
     <div class="country" id="Peru">Peru
-      <p>Lima</p>
+      <p class="hidden">Lima</p>
     </div>
     <div class="country" id="Singapore">Singapore
-      <p>Singapore</p>
+      <p class="hidden">Singapore</p>
     </div>
   </div>
-  <span><div id="guessCounter"></div><div id="wrongCounter"></div></span>
-
+  <div class="scoreBoard">Score:
+    <div id="guessCounter"></div>
+    <div id="wrongCounter"></div>
+  </div>
 </body>
 
 </html>

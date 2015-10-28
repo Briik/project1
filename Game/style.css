@@ -1,56 +1,100 @@
+@font-face {
+font-family: HappyFox;
+src: url("images/Happy-Fox/HappyFox-Condensed.otf") format("opentype");
+}
+
 body{
   max-width: 1080px;
   margin: 0 auto;
   text-align: center;
+  font-family: tahoma;
+  background-image: url(https://pujangga0709.files.wordpress.com/2012/08/background_wood.gif);
+}
+h1, h2 {
+  color: white;
+}
+form{
+  margin: 0 auto;
+  width: 600px;
+  height: auto;
+  background: #008B8B;
+  border: 5px transparent;
+  border-radius: 10px;
+  padding-bottom: 5px;
+}
+.scoreBoard {
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  background: solid;
+  background-color: khaki;
+  margin: 0 auto;
+  width: 150px;
+  height: auto;
+  border: 2px solid transparent;
+  border-radius: 5px;
 }
 #GameSpace{
+  padding: 10px ;
+  border: 2px solid brown;
+  border-radius: 20px;
   margin: 0 auto;
-  max-width: 80%;
-  background-color: grey;
+  width: 80%;
+  background-color: green;
   color: black;
   display: inline-block;
 }
 .country {
   float: none;
-  height: 50px;
-  width: 120px;
+  height: 60px;
+  width: 200px;
   text-align: center;
-  margin: 0 auto;
+  font-size-adjust: auto;
+  margin: 0;
   background-color: white;
   border: 2px solid black;
+  border-radius: 5px;
+  font-family: HappyFox;
+  font-size: 42px;
   display: inline-block;
 }
 .stuff, p{
+  margin: 0;
+  padding: 0;
   height: 0px;
   width: 0px;
   color: transparent;
+  font-size: 0px;
 }
 .pop, .pop2 {
   background: solid;
-  background-color: grey;
   position: fixed;
   height: auto;
   border: 10px solid black;
+  border-radius: 10px;
   z-index: 2;
   overflow: auto;
   color: black;
-  width: 250px;
-  font-size: 36px;
+  width: 33%;
+  position: fixed;
+  left: 33%
 }
 .pop{
   top: 20%;
-  left: 50%;
+  background-color: white;
+  font-size: 72px;
 }
 .pop2{
+  background-color: snow;
+  font-size: 36px;
   top: 30%;
-  left: 50%;
 }
 /*The below classes are not working...?*/
-.correct{
+.correct {
   background: solid;
   background-color: #66FF00;
 }
-.tryAgain{
+.tryAgain {
   background: solid;
   background-color: #FF033E;
 }
