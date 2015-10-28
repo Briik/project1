@@ -11,23 +11,24 @@ $(document).ready(function() {
   var savedCapital = "placeholder";
 
   function cardCreate() {
-    // var removeWildCard = function wildCard(){
-    //   console.log("removing Wild Card");
-    //   $(".img").removeClass("pop");
-    //   $(".img").addClass("stuff");
-    // };
     var cardName = $(".createCountry").val();
     var cardCaptial = $(".createCapital").val();
     $("#GameSpace").prepend("<div class='country' id='" + cardName + "'>" + cardName + "<p class='hidden'>" + cardCaptial + "</p></div>");
     console.log("adding card");
-    // $("img").removeClass("stuff");
-    // $("img").addClass("pop");
-    // setTimeout(removeWildCard, 1000);
+    $("img").removeClass("stuff");
+    $("img").addClass("pop");
+  };
+
+  var removeWildCard = function wildCard(){
+    console.log("removing Wild Card");
+    $("img").removeClass("pop");
+    $("img").addClass("stuff");
   };
 
   $(".form").submit(function(event) {
     event.preventDefault();
     cardCreate();
+    setTimeout(removeWildCard, 1500);
   });
 
   function checkContent(event) {
