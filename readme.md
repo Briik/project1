@@ -1,7 +1,10 @@
 Flashcards - National Capitals is a project by Bryce Lively as part of General Assembly's 7th Washington, DC Web Developemnt Immersive program.  
+
+URL: http://briik.github.io/project1/
+
 Techologies used include HTML, jQuery, and CSS3. This project uses open-source otf fonts to provide a persistent user experience.  jQuery DOM manipulation and HTML forms are used to add user-generated content to the page and incorporate that content into the existing functionality. CSS manipulation is used to provide a consistent game environment.  Pop up windows are reserved for providing feedback to the user's inputs.
 
-    I would have liked to completely replace the prompt used to get feedback from the user.
+I would have liked to completely replace the prompt used to get feedback from the user.
 
 User Stories:
 
