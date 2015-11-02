@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flashcards - National Capitals</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="./images/2649131.jpeg" alt="Wild Card Appeared!" class="stuff"/>
+    <!-- "stuff" isn't a good class name! But bonus points for the image. :) -->
+    <h1>WDI Flash Cards Project</h1>
+    <h2 id="Announcement"></h2>
+  </header>
+  <form class="form">
+    <h3>Make your own cards here:</h3>
+    Country:&nbsp;
+    <input type="text" class="createCountry" placeholder="Make your own cards!"> &nbsp; Capital:&nbsp;
+    <input type="text" class="createCapital" placeholder="Make your own cards!"> &nbsp;
+    <input type="submit" value="Create Card" id="submit">
+  </form><br>
+  <div class="stuff" id="WinOrLose"></div>
+  <div id="GameSpace">
+    <!-- In general it's considered good convention for IDs and classes to start lowercase -->
+    <div class="country" id="Australia">Australia
+      <p class="hidden">Canberra</div>
+    <div class="country" id="Bahrain">Bahrain
+      <p class="hidden">Manama</p>
+    </div>
+    <div class="country" id="Chile">Chile
+      <p class="hidden">Santiago</p>
+    </div>
+    <div class="country" id="Colombia">Colombia
+      <p class="hidden">Bogota</p>
+    </div>
+    <div class="country" id="Dominican&nbsp;Republic">Dominican Republic
+      <p class="hidden">Santo Domingo</p>
+    </div>
+    <div class="country" id="Egypt">Egypt
+      <p class="hidden">Cairo</p>
+    </div>
+    <div class="country" id="Jordan">Jordan
+      <p class="hidden">Amman</p>
+    </div>
+    <div class="country" id="Korea">Korea
+      <p class="hidden">Seoul</p>
+    </div>
+    <div class="country" id="Morocco">Morocco
+      <p class="hidden">Rabat</p>
+    </div>
+    <div class="country" id="Canada">Canada
+      <p class="hidden">Ottawa</p>
+    </div>
+    <div class="country" id="Oman">Oman
+      <p class="hidden">Muscat</p>
+    </div>
+    <div class="country" id="Panama">Panama
+      <p class="hidden">Panama City</p>
+    </div>
+    <div class="country" id="Peru">Peru
+      <p class="hidden">Lima</p>
+    </div>
+    <div class="country" id="Singapore">Singapore
+      <p class="hidden">Singapore</p>
+    </div>
+<!-- I think you mentioned in the squad scrum that you were unsure about when it would be beneficial to have data hardcoded as HTML or softcoded as Javascript. This would be a good place to do softcoding:
+
+var countries = [
+  ["Peru", "Lima"],
+  ["Canada", "Ottawa"]
+]
+var i;
+for(i = 0; i < countries.length; i++){
+  document.body.append("<div class='county'>" + countires[i][0])...
+}
+... and so on. You actually did all the hard work already with your cardCreate() function!
+-->
+  </div>
+  <div class="scoreBoard">Score:
+    <div id="guessCounter"></div>
+    <div id="wrongCounter"></div>
+  </div>
+</body>
+
+</html>
