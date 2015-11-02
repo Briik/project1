@@ -2,6 +2,7 @@
 font-family: HappyFox;
 src: url("images/Happy-Fox/HappyFox-Condensed.otf") format("opentype");
 }
+/* Nice job using an external font! */
 
 body{
   max-width: 1080px;
@@ -74,6 +75,7 @@ form{
   color: black;
   width: 33%;
   position: fixed;
+  /*You've got a duplicate position here */
   left: 33%
 }
 .pop{
@@ -86,6 +88,7 @@ form{
   font-size: 36px;
   top: 30%;
 }
+/* When in doubt, inspect element and see what's going on there.*/
 /*The below classes are not working...?
 .correct {
   background-color: #66FF00;

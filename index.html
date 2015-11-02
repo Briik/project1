@@ -11,6 +11,7 @@
 <body>
   <header>
     <img src="./images/2649131.jpeg" alt="Wild Card Appeared!" class="stuff"/>
+    <!-- "stuff" isn't a good class name! But bonus points for the image. :) -->
     <h1>WDI Flash Cards Project</h1>
     <h2 id="Announcement"></h2>
   </header>
@@ -23,6 +24,7 @@
   </form><br>
   <div class="stuff" id="WinOrLose"></div>
   <div id="GameSpace">
+    <!-- In general it's considered good convention for IDs and classes to start lowercase -->
     <div class="country" id="Australia">Australia
       <p class="hidden">Canberra</div>
     <div class="country" id="Bahrain">Bahrain
@@ -64,6 +66,18 @@
     <div class="country" id="Singapore">Singapore
       <p class="hidden">Singapore</p>
     </div>
+<!-- I think you mentioned in the squad scrum that you were unsure about when it would be beneficial to have data hardcoded as HTML or softcoded as Javascript. This would be a good place to do softcoding:
+
+var countries = [
+  ["Peru", "Lima"],
+  ["Canada", "Ottawa"]
+]
+var i;
+for(i = 0; i < countries.length; i++){
+  document.body.append("<div class='county'>" + countires[i][0])...
+}
+... and so on. You actually did all the hard work already with your cardCreate() function!
+-->
   </div>
   <div class="scoreBoard">Score:
     <div id="guessCounter"></div>

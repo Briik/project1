@@ -5,6 +5,7 @@ $(document).ready(function() {
   var numCorrect = 0;
   var numWrong = 0;
   var correct = "<br>CORRECT!<br><br>";
+  // Boooo. Don't use `<br>` tags. The only situation in which they're allowed is when you need to separate the lines of a mailing address.
   var tryItAgain = "<br>Try Again!<br><br>";
   var gameResponse = "Error: This is the Default Text."
   var targetP = "placeholder";
@@ -19,6 +20,7 @@ $(document).ready(function() {
     $("img").addClass("pop");
   };
 
+  // It doesn't really matter too much whether you use function functionName() or var functionName = function(), but I'd say pick one and stick with it. I prever the former because it means I can put all my functions at the very end of the file, thanks to hoisting.
   var removeWildCard = function wildCard(){
     console.log("removing Wild Card");
     $("img").removeClass("pop");
@@ -46,8 +48,10 @@ $(document).ready(function() {
       gameResponse = tryItAgain;
     };
     WinOrLose.html("" + gameResponse + "");
+    // I'm not sure what the empty strings above do...?
   };
 
+  // When you use the var functionName = function syntax, you don't need to include a function name -- the variable's name serves as the function name.
   var retract = function retracting(event) {
     targetP.removeClass("pop");
     targetP.addClass("hidden");
@@ -75,6 +79,7 @@ $(document).ready(function() {
       // };
       thisP.removeClass("hidden").addClass("pop");
     }.bind(this);
+    // You generally don't want to define a function inside an event handler. That's because creating functions takes memory, and this function is going to be created all over again every time the click fires. It won't add noticeable bloat to a smaller site like this, but avoiding that would be a good practice to start now.
 
     checkContent(event);
     addclass();
@@ -83,6 +88,7 @@ $(document).ready(function() {
     if (numCorrect === $(".country").length) {
       alert("You have been playing for a while!<br>Why not take a break and go outside?");
     };
+    // Never!
     console.log("numCorrect: " + numCorrect);
   });
 });
